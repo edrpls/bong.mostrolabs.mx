@@ -1,0 +1,70 @@
+- # encoding: UTF-8
+!!! 5
+%html
+  %head
+    %meta(http-equiv="Content-type" content="text/html;charset=UTF-8")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+    %title= "Bong"
+    %link(href="s/style.css" media="all" rel="stylesheet")
+  %body
+    %header
+      %nav
+        %ul
+          %li
+            %a(href="#") Web
+          %li
+            %a(href="#") Imágenes
+          %li
+            %a(href="#") Vídeos
+          %li
+            %a(href="#") Noticias
+          %li
+            %a(href="#") Mapas
+          %li
+            %a(href="#") Más
+          %li
+            %a(href="#") Prodigy/MSN
+          %li
+            %a(href="#") Outlook.com
+      #conf
+        #session
+          %a(href="#") Iniciar sesión
+          .connect-box
+            Cuenta Microsoft
+            %span Desconectado
+            %a(href="#") Conectar
+            %a(href="#") Historial de búsqueda
+        %a#cog(href="#") Configuración
+    #content
+      #search-box
+        %p.logo Bong
+        %form(action="search")
+          %input(type="text")
+          %input(type="submit")
+          %input(id="all" type="checkbox" value="all")
+          %label(for="all") Mostrar todos
+          %input(id="spanish" type="checkbox" value="spanish")
+          %label(for="spanish") Sólo en Español
+          %input(id="local" type="checkbox" value="local")
+          %label(for="local") Sólo en México
+      #bg-controls
+        %button(data-btn="expand" type="button") Expandir imagen
+        %button(data-btn="prev" type="button") Anterior
+        %button(data-btn="next" type="button") Siguiente
+        %button(data-btn="dunnolol" type="button") Nothing!
+    %footer
+      %ul
+        %li
+          %a(href="#") © 2014 Éder
+        %li
+          %a(href="#") Privacidad y cookies
+        %li
+          %a(href="#") Legal
+        %li
+          %a(href="#") Anuncios
+        %li
+          %a(href="#") Sobre nuestra publicidad
+        %li
+          %a(href="#") Ayuda
+        %li
+          %a(href="#") Comentarios sobre Bong
