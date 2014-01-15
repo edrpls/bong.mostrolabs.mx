@@ -1,118 +1,113 @@
 - # encoding: UTF-8
-!!! 5
-%html
-  %head
-    %meta(http-equiv="Content-type" content="text/html;charset=UTF-8")
-    %meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
-    %title= "Bong"
-    %link(href="s/style.css" media="all" rel="stylesheet")
-  %body.list
-    %header
-      %a#bg-bar(href="#") Volver
-      %nav
-        %ul
-          %li
-            %a(href="#") Web
-          %li
-            %a(href="#") Imágenes
-          %li
-            %a(href="#") Vídeos
-          %li
-            %a(href="#") Noticias
-          %li
-            %a(href="#") Mapas
-          %li
-            %a(href="#") Más
-      #search-box
-        %p.logo Bong
-        %form(action="search")
-          %input(type="text")
-          %input(type="submit")
-      #more
-        %span.result-num 420000 Resultados
-        %span.lang-filter Filtrar por idioma
-          %a(href="#") Sólo Español
+%body.list()
+  %header
+    %a#bg-bar(href="#") Volver
+    %nav
+      %ul
+        %li.active
+          %a(href="#") Web
+        %li
+          %a(href="#") Imágenes
+        %li
+          %a(href="#") Vídeos
+        %li
+          %a(href="#") Noticias
+        %li
+          %a(href="#") Mapas
+        %li
           %a(href="#") Más
-        %span.region-filter Filtrar por región
-          %a(href="#") Sólo de México
-      #conf
-        #session
-          %a(href="#") Iniciar sesión
-          .connect-box
-            Cuenta Microsoft
-            %span Desconectado
-            %a(href="#") Conectar
-            %a(href="#") Historial de búsqueda
-        %a#cog(href="#") Configuración
-    #content
-      %ul#results
-        %li
-          %a(href="#") First result
-          %span www.firstresult.com
-          %p.description This is a test description for this result. Such results. Much search. Wow.
-      .related
-        %span Búsquedas relacionadas
-        %ul
-          %li
-            %a(href="#") Related search 1
-          %li
-            %a(href="#") Related search 2
-          %li
-            %a(href="#") Related search 3
-          %li
-            %a(href="#") Related search 4
-          %li
-            %a(href="#") Related search 5
-          %li
-            %a(href="#") Related search 6
-          %li
-            %a(href="#") Related search 7
-          %li
-            %a(href="#") Related search 8
-      %ul#pager
-        %li
-          %a(href="#") 1
-        %li
-          %a(href="#") 2
-        %li
-          %a(href="#") 3
-        %li
-          %a(href="#") 4
-        %li
-          %a(href="#" data-dir="next") Siguiente
-      %aside
-        %span Búsquedas relacionadas
-        %ul
-          %li
-            %a(href="#") Related search 1
-          %li
-            %a(href="#") Related search 2
-          %li
-            %a(href="#") Related search 3
-          %li
-            %a(href="#") Related search 4
-          %li
-            %a(href="#") Related search 5
-          %li
-            %a(href="#") Related search 6
-          %li
-            %a(href="#") Related search 7
-          %li
-            %a(href="#") Related search 8
-    %footer
+    #search-box
+      %p.logo.ib Bong
+      %form.ib(action="search" method="GET")
+        %input#query(type="text" value="")
+        %input#hidden(type="hidden" name="language" value="all")
+        %input(type="submit")
+    #more
+      %span.result-num
+      .lang-filter
+        %span Filtrar por idioma
+        %div
+          %a(href="#" data-lang="spanish") Sólo Español
+          %a(href="#") Más
+      .region-filter
+        %span Filtrar por región
+        %div
+          %a(href="#" data-lang="mex" ) Sólo de México
+    #conf
+      #session
+        %a(href="#") Iniciar sesión
+        .connect-box
+          Cuenta Microsoft
+          %span Desconectado
+          %a(href="#") Conectar
+          %a(href="#") Historial de búsqueda
+      %a#cog(href="#") Configuración
+  #content
+    %ul#results
+    .related.btm
+      %span Búsquedas relacionadas a <span id="last-query"></span>
       %ul
         %li
-          %a(href="#") © 2014 Éder
+          %a(href="#") Related search 1
         %li
-          %a(href="#") Privacidad y cookies
+          %a(href="#") Related search 2
         %li
-          %a(href="#") Legal
+          %a(href="#") Related search 3
         %li
-          %a(href="#") Anuncios
+          %a(href="#") Related search 4
         %li
-          %a(href="#") Sobre nuestra publicidad
+          %a(href="#") Related search 5
         %li
-          %a(href="#") Ayuda
+          %a(href="#") Related search 6
         %li
-          %a(href="#") Comentarios sobre Bong
-
+          %a(href="#") Related search 7
+        %li
+          %a(href="#") Related search 8
+    %ul#pagination
+      %li.active
+        %a(href="#") 1
+      %li
+        %a(href="#") 2
+      %li
+        %a(href="#") 3
+      %li
+        %a(href="#") 4
+      %li
+        %a(href="#") 5
+      %li(data-dir="next")
+        %a(href="#") Siguiente
+  %aside.related
+    %span Búsquedas relacionadas
+    %ul
+      %li
+        %a(href="#") Related search 1
+      %li
+        %a(href="#") Related search 2
+      %li
+        %a(href="#") Related search 3
+      %li
+        %a(href="#") Related search 4
+      %li
+        %a(href="#") Related search 5
+      %li
+        %a(href="#") Related search 6
+      %li
+        %a(href="#") Related search 7
+      %li
+        %a(href="#") Related search 8
+  %footer
+    %ul
+      %li
+        %a(href="#") © 2014 Éder
+      %li
+        %a(href="#") Privacidad y cookies
+      %li
+        %a(href="#") Legal
+      %li
+        %a(href="#") Anuncios
+      %li
+        %a(href="#") Sobre nuestra publicidad
+      %li
+        %a(href="#") Ayuda
+      %li
+        %a(href="#") Comentarios sobre Bong
